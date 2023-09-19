@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h1 class="logo">Ankul.</h1>
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Embedded Engineering</p>
+            <h1>Hi, I'm <span>Ankul Kumar</span><br> From India</h1>
+        </div>
+        </div>
+    </div>
+    <!-- ---------------------about------------------------------------ -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="user 3.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello! I'm Ankul Kumar, a passionate and driven B.Tech student currently pursuing my degree at SRM University. I have always been fascinated by the world of technology, and my educational journey has allowed me to explore and develop my skills in various areas of engineering and beyond.<br>Aspiring Embedded Engineer seeking an Internship. I am excited about the endless possibilities that the tech world offers and am committed to making a positive impact through my work.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Java,C,C++,Python</span><br>Java,C,C++,Python</li>
+                            <li><span>Embedded System</span><br>Embedded System</li>
+                            <li><span>IOT(Internet Of Things)</span><br>IOT(Internet Of Things)</li>
+                            <li><span>MATLAB</span><br>MATLAB</li>
+                            <li><span>Microprocessor</span><br>Microprocessor</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>Intern in Usha Martin.<br>(June 2023-July 2023)</span><br>worked in Omron PLC,DVP-12SE&Delta HMI</li>
+                            <li><span>Home Automation</span><br>Project based on IOT and Embedded System.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2021-2025</span><br>SRM Institute of Science and Technology</li>
+                            <li><span>2019-2021 (XII)</span><br>Firayalal Public School</li>
+                            <li><span>2018-2019 (X)</span><br>Mazzarello School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -----------------project----------------------------------------- -->
+    <div id="project">
+        <div class="container">
+            <h1 class="sub-title">Project</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="jorge-ramirez-DQIZT8JafhU-unsplash.jpg">
+                </div>
+                <div class="work-col-2">
+                    <h1 class="sub-title">Home Automation</h1>
+                    <p> ❖ Worked with a team on a “Home Automation” Project based on IOT and Embedded System.<br>
+                        ❖ We designed a cost efficient smart board system using a Nodemcu ESP 8266, a four-channel relay and the Blynk IOT Technology used includes Embedded C Programming.<br>
+                        ❖ It is able to control basic home appliances including light and fan of the room. We were successful in implementing this project in an actual office room.<br></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------------contact------------------------------------ -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>  ankulkumar2689@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>  0123456789</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright @ Ankul. Made with <i class="fa-solid fa-heart"></i> by Ankul Kumar</p>
+        </div>
+    </div>
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>
